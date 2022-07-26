@@ -10,8 +10,7 @@ body {
 }
 
 .header {
-    padding: 0.5rem;
-    height: 5rem;
+    height: 12rem;
     background-color: #279F92;
     border-block-end:thick groove white; 
     overflow: hidden;
@@ -25,10 +24,10 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     font-style: italic;
-    align-self: center;
+    align-self: flex-start;
     color: #F0EEE3;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
@@ -48,34 +47,36 @@ h1 {
   
 #main-menu {
     display: block;
-    height: 2rem;
+    height: 3rem;
     background: #279F92;
-    margin-inline: 0.5rem;  
+    margin-inline: 1rem;  
     z-index: 9;
 }
   
 .navbar {
     display: flex;
-    width: 100%;
-    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-block: 1rem;
     margin: 0rem auto;
-    padding: 0.5rem;
+    padding-inline: 1rem;
   }
   
 #main-menu li {
     list-style-type: none;
-    font-size: 2rem;
+    padding: 0.5rem;
+    margin: 0 auto;
 }
 
 #main-menu a {
     padding: 0.5rem;
     color: #F0EEE3;
-    font-size: 0.8rem;
+    font-size: 3rem;
     text-decoration: none;
-    border-right: 1px solid white; 
 }
   
 #main-menu a:hover {
+    border-right: 1px solid white; 
     background-color: white #66606A;
     color: white;
     border-radius: 5rem;
@@ -214,7 +215,19 @@ h3:hover {
 }
 
 .content2 {
-  display:block;
+  display:flex;
+  padding-block: 2rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.intro p {
+  font-size: large; 
+  font-weight: bold; 
+  color: #73BC3B;
+  text-indent: 2rem;
+  margin-inline-start: 2rem;
 }
 
 footer {
@@ -228,14 +241,14 @@ footer {
 }
 
 .footer-menu {
-  list-style:circle;
+  list-style: none outside none;
 }
 
-a {
+.footer-menu a {
   text-decoration: none;
-  margin: 0.5rem;
-  padding: 0.4rem; 
-  line-height: 1.5rem;
+  font-size: large;
+  margin-inline-start: 3rem;
+  line-height: 2rem;
 }
 
 .footer-m:hover {
@@ -261,9 +274,10 @@ a, a:hover {
 }
 
 .form {
-  margin-inline: 2rem;
+  margin-inline: 3rem;
+  margin-block: 3rem;
   display: flex;
-  justify-content: center;
+  justify-content:center;
 
 }
 
@@ -278,7 +292,7 @@ input, textarea , button{
   margin-block-start: 2rem;
 }
 .socialbtns, .socialbtns ul, .socialbtns li {
-  padding: 0.2rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -334,4 +348,12 @@ input, textarea , button{
     height: auto;
     align-self: center;
   }
+
+  .content2 {
+    display:flex;
+    padding-block: 2rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
 }
