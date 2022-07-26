@@ -1,3 +1,4 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 * {
   box-sizing: border-box;
@@ -9,13 +10,12 @@ body {
 }
 
 .header {
-    padding: 0.5rem;
-    height: 5rem;
+    height: 12rem;
     background-color: #279F92;
     border-block-end:thick groove white; 
     overflow: hidden;
     display: flex;
-    flex-direction: row;   
+    flex-direction: row; 
 }
 
 .logo {
@@ -24,10 +24,10 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     font-style: italic;
-    align-self: center;
+    align-self: flex-start;
     color: #F0EEE3;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
@@ -47,36 +47,37 @@ h1 {
   
 #main-menu {
     display: block;
-    height: 2rem;
+    height: 3rem;
     background: #279F92;
-    margin-inline: 0.5rem;  
+    margin-inline: 1rem; 
     z-index: 9;
 }
   
 .navbar {
     display: flex;
-    width: 100%;
-    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-block: 1rem;
     margin: 0rem auto;
-    padding: 0.5rem;
-
-  }
+    padding-inline: 1rem;
+}
   
 #main-menu li {
     list-style-type: none;
-    font-size: 2rem;
+    padding: 0.5rem;
+    margin: 0 auto;
 }
 
 #main-menu a {
     padding: 0.5rem;
     color: #F0EEE3;
-    font-size: 0.8rem;
+    font-size: 3rem;
     text-decoration: none;
-    border-right: 1px solid white;
   
 }
   
 #main-menu a:hover {
+    border-right: 1px solid white;
     background-color: white #66606A;
     color: white;
     border-radius: 5rem;
@@ -256,7 +257,21 @@ h3:hover {
   margin-inline: 2rem;
   border-radius: 45%;
   size: 100%; 
+  animation: flip-with-scale 8s infinite;
 }
+
+@keyframes flip-with-scale {
+  0% {opacity: 0;
+      transform: perspective(400px) scalex(1);
+  }
+  15% {opacity: 1;
+      transform: perspective(400px) scalex(-1);
+  }
+  100% {
+    transform: perspective(400px) scalex(-1);
+}
+}
+
 
 .out {
   display: grid;
@@ -287,7 +302,6 @@ h3:hover {
   background-color: #2f857c;
 }
 
-
 footer {
   display: flex;
   flex-direction: column;
@@ -299,14 +313,15 @@ footer {
 }
 
 .footer-menu {
-  list-style:circle;
+  list-style: none outside none;
 }
 
-a {
+.footer-menu a {
+  font-size: large;
   text-decoration: none;
   margin: 0.5rem;
   padding: 0.4rem; 
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 
 .footer-m:hover {
@@ -314,10 +329,51 @@ a {
   color:#279F92;
 }
 
+
+.socialbtns {
+  margin-inline: 2rem;
+  margin-block-start: 2rem;
+}
+.socialbtns, .socialbtns ul, .socialbtns li {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.socialbtns li {
+  list-style: none outside none;
+  display: inline-block;
+}
+
+.invite {
+  margin-inline-end: 1rem;
+  color: #66606A;
+  font-size: large;
+  text-shadow: 0.1rem 0rem white
+}
+
+.socialbtns .fa {
+	width: 2.1rem;
+  height: 2.1rem;
+	color: #000;
+	background-color: #FFF;
+	border: 0.1rem solid #000;
+	padding-block: 0.5rem;
+	border-radius: 2rem;
+}
+
+.socialbtns .fa:hover {
+	color: #FFF;
+	background-color: #000;
+	border: 0.1rem solid #000;
+}
+
 .copyright {
   align-self: center;
   font-size: 0.8rem;
 }
+
 
 input[type="radio"] {
   display: none;
