@@ -283,7 +283,7 @@ h1 {
     list-style: none outside none;
   }
   
-  a.footer-menu a {
+  .footer-menu a {
     font-size: large;
     text-decoration: none;
     margin: 0.5rem;
