@@ -317,11 +317,10 @@ footer {
   list-style: none outside none;
 }
 
-.footer-menu a {
-  font-size: large;
+ .footer-menu a {
   text-decoration: none;
-  margin: 0.5rem;
-  padding: 0.4rem; 
+  font-size: large;
+  margin-inline-start: 3rem;
   line-height: 2rem;
 }
 
